@@ -2,6 +2,7 @@
 
 This project is a Spotify-like user interface built using Next.js and styled with Tailwind CSS. It aims to replicate the aesthetics and functionality of the Spotify web application.
 
+![Spotify Interface Screenshot](screenshot.png)
 
 ## Features
 
@@ -36,7 +37,7 @@ npm install
 
 npm run dev
 
-1. Open your browser and access the application at `http://localhost:3000` to view the Spotify interface.
+5. Open your browser and access the application at `http://localhost:3000` to view the Spotify interface.
 
 ## Usage
 
