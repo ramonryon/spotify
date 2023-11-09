@@ -1,40 +1,13 @@
-import { Home as HomeIcon, Search, Library, ChevronLeft, ChevronRight, Play, Heart, Shuffle, SkipBack, SkipForward, Repeat, Mic2, LayoutList, Laptop2, Volume, Maximize } from "lucide-react"
+import Footer from "@/components/Footer"
+import Siderbar from "@/components/Siderdar"
+import { Home as ChevronLeft, ChevronRight, Play } from "lucide-react"
 import Image from "next/image"
 
 export default function Home() {
   return (
     <div className="h-screen flex flex-col">
       <div className="flex flex-1">
-        <aside className="w-72 bg-zinc-950 p-6">
-          <nav className="space-y-5">
-            <a href="" className="flex items-center gap-2 text-sm font-semibold text-zinc-200">
-              <HomeIcon />
-              Home
-            </a>
-            <a href="" className="flex items-center gap-2 text-sm font-semibold text-zinc-200">
-              <Search />
-              Search
-            </a>
-            <a href="" className="flex items-center gap-2 text-sm font-semibold text-zinc-200">
-              < Library />
-              Your Library
-            </a>
-          </nav>
-
-          <nav className="mt-6 pt-6 border-t border-zinc-800 flex flex-col gap-3">
-            <a href="" className=" text-sm text-zinc-400 hover:text-zinc-100">Cardio Crush</a>
-            <a href="" className=" text-sm text-zinc-400 hover:text-zinc-100">Workout Warriors</a>
-            <a href="" className=" text-sm text-zinc-400 hover:text-zinc-100">Gym Groove</a>
-            <a href="" className=" text-sm text-zinc-400 hover:text-zinc-100">Run Rhythms</a>
-            <a href="" className=" text-sm text-zinc-400 hover:text-zinc-100">Pump It Up!</a>
-            <a href="" className=" text-sm text-zinc-400 hover:text-zinc-100">Fitness Frenzy</a>
-            <a href="" className=" text-sm text-zinc-400 hover:text-zinc-100">Sweat Session Sounds</a>
-            <a href="" className=" text-sm text-zinc-400 hover:text-zinc-100">Crossfit Jamz</a>
-            <a href="" className=" text-sm text-zinc-400 hover:text-zinc-100">Yoga Vibes</a>
-            <a href="" className=" text-sm text-zinc-400 hover:text-zinc-100">Chill Cool-Downs</a>
-
-          </nav>
-        </aside>
+        <Siderbar />
         <main className="flex-1 p-6">
           <div className="flex items-center gap-4">
             <button className="rounded-full bg-black/40 p-2">
@@ -122,54 +95,10 @@ export default function Home() {
               <span className="text-sm text-zinc-400">Megadeth, Angra, AC/DC and more</span>
             </a>
           </div>
+
         </main>
       </div>
-      <footer className="bg-zinc-800 border-t border-zinc-700 px-6 py-4 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <Image src="/album.webp" width={64} height={64} alt="Capa do album somewhere in time da banda Iron maiden" />
-          <div className="flex flex-col">
-            <strong className="font-normal">Wasted Years</strong>
-            <span className="text-xs text-zinc-400">Iron Maiden</span>
-          </div>
-          <Heart />
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <div className="flex items-center gap-4">
-            <Shuffle size={20} className="text-zinc-200" />
-            <SkipBack size={20} className="text-zinc-200" />
-
-            <button className="w-12 h-12 flex items-center justify-center pl-1 rounded-full bg-white text-black">
-              <Play />
-            </button>
-
-            <SkipForward size={20} className="text-zinc-200" />
-            <Repeat size={20} className="text-zinc-200" />
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-zinc-400">0:41</span>
-            <div className="h-1 rounded-full w-96 bg-zinc-600">
-              <div className="bg-zinc-200 w-40 h-1 rounded-full">
-
-              </div>
-            </div>
-            <span className="text-xs text-zinc-400">2:24</span>
-          </div>
-        </div>
-        <div className="flex items-center gap-4">
-          <Mic2 size={20} />
-          <LayoutList size={20} />
-          <Laptop2 size={20} />
-          <div className="flex items-center gap-2">
-            <Volume size={20} />
-            <div className="h-1 rounded-full w-24 bg-zinc-600">
-              <div className="bg-zinc-200 w-10 h-1 rounded-full">
-
-              </div>
-            </div>
-            <Maximize size={20} />
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
